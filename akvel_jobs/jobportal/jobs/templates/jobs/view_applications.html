@@ -1,0 +1,12 @@
+
+{% extends 'jobs/base.html' %}
+<h2>Applications for {{ job.title }}</h2>
+<ul>
+    {% for application in applications %}
+    <li>
+        <h3>{{ application.user.username }}</h3>
+        <p>{{ application.cover_letter }}</p>
+        <p>Status: {{ application.status }}</p>
+    </li>
+    {% endfor %}
+</ul>
